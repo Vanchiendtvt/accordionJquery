@@ -7,7 +7,7 @@ $(document).ready(function(){
     $('.accordionBtn').click(function(event){
                 event.preventDefault();
                 if($(this).next()[0].style.display == 'none'){
-                $('.accordionMenu').slideUp(speed);
+                $(this).parent().parent().find('li').find('ul').slideUp(speed);
                 $(this).next().slideDown(speed);
                 } else $(this).next().slideUp(speed);
             })
